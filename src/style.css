@@ -3,6 +3,22 @@ body{
   padding: 0;
 }
 
+/* THIS ABOUT TO BE BAD CSS */
+.readout {
+  color: white;
+  opacity: 1;
+  transition: .5s ease;
+}
+
+.rolling .die-svg {
+  animation: lines 1s ease, scale-and-roll 1s ease;
+}
+
+.rolling .readout {
+  opacity: 0;
+  transition: 0s;
+}
+
 .app-container {
   text-align: center;
   display: grid;
@@ -41,17 +57,29 @@ svg{
   width: 150px;
 }
 
-.clicked{
-  transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
-  animation: Dice-spin 2s;
+@keyframes lines {
+  from {
+    stroke-dasharray: 0 1000;
+  }
+  to {
+    stroke-dasharray: 1000 0;
+  }
 }
 
-@keyframes Dice-spin {
-  0% { transform: rotate(0deg); }
-  25% { transform: scale(1.2) translateY(-25px); }
-  50% { transform: rotate(1080deg); }
+@keyframes scale-and-roll {
+  0% {
+    transform: scale(1) rotate(0deg)
+  }
+  25% {
+    transform: scale(1.5) rotate(0deg);
+  }
+  50% {
+    transform: scale(1) rotate(0deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
 }
-
 
 @media screen and (max-width: 992px){
   .dice-parent{
