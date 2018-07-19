@@ -4,7 +4,18 @@ body{
 }
 
 /* THIS ABOUT TO BE BAD CSS */
-.readout {
+.die{
+  position: relative;
+}
+
+.readout, [data-d4]:before {
+  font-family: 'Salome';
+  font-size: 2vw;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
   color: white;
   opacity: 1;
   transition: .5s ease;
@@ -14,9 +25,40 @@ body{
   animation: lines 1s ease, scale-and-roll 1s ease;
 }
 
-.rolling .readout {
+.rolling .readout,
+.rolling[data-d4]:before {
   opacity: 0;
   transition: 0s;
+}
+
+[id$='10'] .readout {
+  transform: translateY(-150%);
+}
+
+[id$='8'] .readout {
+  transform: translateY(-90%);
+}
+
+[id$='6'] .readout {
+  transform: translateY(-225%);
+}
+
+[id$='4'] .readout {
+  top: 45%;
+  left: 45px;
+  transform: translateY(-50%) rotate(-25deg);
+}
+
+[data-d4]:before {
+  content: attr(data-d4);
+  position: absolute;
+  font-family: 'Salome';
+  color: white;
+  font-size: 2vw;
+  top: 45%;
+  left: 47px;
+  right: auto;
+  transform: translateY(-50%) rotate(25deg);
 }
 
 .app-container {
