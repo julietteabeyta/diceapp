@@ -48,6 +48,7 @@ svg{
 
 #rollValue{
   color: white;
+  font-size: 35px;
   position: absolute;
   left: 49%;
 }
