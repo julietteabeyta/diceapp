@@ -22,7 +22,7 @@ class Die extends Component {
 
         clearInterval(timer);
       }
-      document.getElementById(`d${diceId}`).setAttribute("stroke-dasharray", linelength + " " + linegap);
+      document.getElementById(`${diceId}`).setAttribute("stroke-dasharray", linelength + " " + linegap);
     }, 15)
 
     let values = [];
