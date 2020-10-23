@@ -17,7 +17,6 @@ class App extends Component {
   render() {
     return (
       <div className="app-container">
-        <img className="bg-img" src="https://i2.wp.com/www.retro-synthwave.com/wp-content/uploads/2016/10/retro-synthwave_GIF-00-4.gif?zoom=2&fit=500%2C300&ssl=1" alt="Synthwave Background"/>
         <div>
           <div id="rollValue">{this.state.rollValue}</div>
           <DiceContainer

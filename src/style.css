@@ -44,7 +44,6 @@ img{
   background: #000;
   letter-spacing: 7px;
   font-family: 'Road Rage', sans-serif;
-  text-shadow: 2px 2px 5px #fff;
   text-transform: uppercase;
   font-size: 35px;
   justify-self: center;
@@ -102,9 +101,6 @@ svg{
     transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
     animation: Dice-spin-responsive 2s;
   }
-  .bg-img{
-    display: none;
-  }
   .app-container {
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
@@ -117,9 +113,6 @@ svg{
   svg{
     height: 75px;
     width: 75px;
-  }
-  .bg-img{
-    display: none;
   }
   .dice-value{
     font-size: 2.5em;
